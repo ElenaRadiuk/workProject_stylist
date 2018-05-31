@@ -50,6 +50,10 @@ button {
   outline: 0 !important;
 }
 
+a:active{
+  outline: none;
+}
+
 /*end css reset*/
 
 /*global*/
@@ -368,7 +372,7 @@ a {
 
 .navbar-nav li, .navbar-nav li:hover, .nav > li > a:visited, .nav > li > a:active, .navbar-default .navbar-nav>li>a:active,
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a {
-  color: white!important;
+  color: white;
   text-decoration: none;
 }
 
@@ -395,7 +399,7 @@ a {
   position: absolute;
   left: 50%;
   margin-left: -120px;
-  top: 130px;
+  top: 140px;
   width: 240px;
 }
 
@@ -623,7 +627,7 @@ a {
   }
 }
 
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .top-menu-main-page .navbar-brand > img {
     max-width: 90px;
   }
@@ -639,8 +643,26 @@ a {
     display: block;
   }
 
+  .top-menu-main-page .navbar-nav {
+    width: 87%;
+    margin-left: 80px;
+  }
+
   .logo img {
     max-width: 220px;
+  }
+}
+
+@media (min-width: 768px) {
+  ul#menu-topmenu:before, ul#menu-topmenu:after {
+    display: none;
+  }
+  .nav > li > a {
+    padding: 10px 0;
+  }
+  .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -659,7 +681,7 @@ a {
   padding-top: 10px;
 }
 
-.footer-menu .navbar-nav > li > a {
+.footer-menu #menu-footermenu.navbar-nav > li > a {
   color: #CEC0A5;
   border-bottom: 1px solid #CEC0A5;
   text-transform: capitalize;
@@ -667,7 +689,7 @@ a {
   font-size: 17px;
 }
 
-.footer-menu .navbar-nav > li > a:hover {
+.footer-menu #menu-footermenu.navbar-nav > li > a:hover {
   color: #CEC0A5;
   border-bottom: 1px solid #CEC0A5;
 }
@@ -1180,19 +1202,10 @@ a {
   font-size: 20px;
 }
 
-/*body,*/
-/*.wrapper {*/
-/*height: 100%;*/
-/*}*/
-/*.contacts {*/
-/*box-sizing: border-box;*/
-/*min-height: 100%;*/
-/*padding-bottom: 100px;*/
-/*}*/
-/*.footer {*/
-/*height: 90px;*/
-/*margin-top: -90px;*/
-/*}*/
+.contact_text a:hover, .contact_text a {
+  text-decoration: none;
+  color: #371907;
+}
 
 /* partners  */
 
@@ -1337,9 +1350,9 @@ a {
   padding: 10px 30px;
 }
 
-.btn_readmore a:hover {
-  color: #371907;
-  text-decoration: none;
+.btn_readmore a:hover, .btn_readmore a:active, .btn_readmore a:focus {
+  color: #371907!important;
+  text-decoration: none!important;
 }
 
 .img_pablisiti {
@@ -1641,6 +1654,10 @@ a {
 .contactform_st .wpcf7-form .wpcf7-submit {
   width: auto;
   padding: 5px 10px;
+  outline: none;
+  border: 1px solid #371907;
+  color: #371907;
+  background: transparent;
 }
 
 .contactform_st .modal-title {
@@ -1695,6 +1712,7 @@ a {
 
 .st_form input {
   border: 1px solid #371907;
+  outline: none;
 }
 
 .st_form + .st_itemform span > label {
@@ -1756,15 +1774,14 @@ a {
   text-align: center;
   padding: 5px 45px;
   font-size: 15px;
-  /*display: inline-block;*/
   text-transform: none;
   position: relative;
-  color: #371907;
+  color: #371907!important;
   background-color: transparent;
 }
 
 .wrapper_form .nav-pills > li.active > a, .wrapper_form .nav-pills > li.active > a:focus, .wrapper_form .nav-pills > li.active > a:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: transparent;
 }
 
